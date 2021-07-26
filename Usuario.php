@@ -2,9 +2,9 @@
 class Usuario{
 
         //propriedades
-	public $nome;
-	public $cpf;
-	public $endereco;
+	public    $nome;
+	protected $cpf;
+	private   $endereco;
 
 	//método construtor da classe
 	function Usuario(){
@@ -15,6 +15,18 @@ class Usuario{
 		$this->nome = "Marcio Vieira";
 		$this->cpf = "226.424.229-02";
 		$this->endereco = "Rua XV de Novembro, 123";
+	}
+
+	public function getCpf (){
+		return $this->cpf;
+	}
+
+	public function getNome(){
+		return $this->nome;
+	}
+
+	function getEndereco(){
+		return $this->endereco;
 	}
 
 }
