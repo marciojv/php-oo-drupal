@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Escola module install file.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function escola_schema() {
+  $schema = [];
+
+  $schema['alunos'] = [
+    'description' => 'Tabela de Cadastro de Alunos',
+    'fields' => [
+      'matricula' => [
+        'description' => 'Identificado da Matricula do Aluno.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'nome' => [
+        'description' => 'Nome do Aluno',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'cidade' => [
+        'description' => 'Cidade de Moradia',
+        'type' => 'varchar',
+        'length' => 100,
+      ],
+    ],
+    'primary key' => ['matricula'],
+  ];
+
+  $schema['notas'] = [
+    'description' => 'Notas dos Alunos',
+    'fields' => [
+      'nota_id' => [
+        'description' => 'Id da Nota',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'aluno_matricula' => [
+        'description' => 'Id do Aluno',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ],
+      'bimestre' => [
+        'description' => 'Numero do Bimestre (1 a 4)',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ],
+      'nota' => [
+        'description' => 'Nota do Aluno de 0 a 10',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ],
+      'observacao' => [
+        'description' => 'Observacao',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['nota_id'],
+  ];
+
+  return $schema;
+}
