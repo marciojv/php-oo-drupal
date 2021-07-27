@@ -11,7 +11,7 @@
 function escola_schema() {
   $schema = [];
 
-  $schema['escola_aluno'] = [
+  $schema['alunos'] = [
     'description' => 'Tabela de Cadastro de Alunos',
     'fields' => [
       'matricula' => [
@@ -35,7 +35,7 @@ function escola_schema() {
     'primary key' => ['matricula'],
   ];
 
-  $schema['escola_nota'] = [
+  $schema['notas'] = [
     'description' => 'Notas dos Alunos',
     'fields' => [
       'nota_id' => [
@@ -70,4 +70,18 @@ function escola_schema() {
   ];
 
   return $schema;
+}
+
+/**
+ * Funcão Hook Update ( hook_update_N() )
+ * Adiciona campo "idade" na tabela aluno.
+ */
+function escola_update_9001(&$sandbox) {
+  $field = [
+    'description' => 'Idade',
+    'type' => 'int',
+    'unsigned' => TRUE,
+  ];
+  $schema = \Drupal::database()->schema();
+  $schema->addField('aluno', 'idade', $field);
 }
