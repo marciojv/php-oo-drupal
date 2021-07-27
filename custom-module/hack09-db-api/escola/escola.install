@@ -11,7 +11,7 @@
 function escola_schema() {
   $schema = [];
 
-  $schema['alunos'] = [
+  $schema['escola_aluno'] = [
     'description' => 'Tabela de Cadastro de Alunos',
     'fields' => [
       'matricula' => [
@@ -35,7 +35,7 @@ function escola_schema() {
     'primary key' => ['matricula'],
   ];
 
-  $schema['notas'] = [
+  $schema['escola_nota'] = [
     'description' => 'Notas dos Alunos',
     'fields' => [
       'nota_id' => [
@@ -85,3 +85,4 @@ function escola_update_9001(&$sandbox) {
   $schema = \Drupal::database()->schema();
   $schema->addField('aluno', 'idade', $field);
 }
+
