@@ -1,0 +1,7 @@
+escola.alunos:
+  path: '/alunos'
+  defaults:
+    _controller: '\Drupal\escola\Controller\EscolaController::alunos'
+    _title: 'Os alunos'
+  requirements:
+    _permission: 'access content'
