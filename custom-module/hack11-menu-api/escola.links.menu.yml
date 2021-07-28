@@ -1,6 +1,0 @@
-escola.alunos:
-  title: 'Aluno'
-  description: 'Apresente Alunos'
-  route_name: escola.alunos
-  menu_name: main
-  weight: 0
