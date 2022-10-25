@@ -1,0 +1,32 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+<header>
+  {% if label %}
+  <h2>{{ label }}</h2>
+  {% endif %}
+
+  {% if display_submitted %}
+  <div>
+   Submitted by {{ author_name }} on {{ date }}
+  </div>
+  {% endif %}
+
+</header>
+
+<div>
+  {{ content }}
+</div>
+
+</article>

@@ -1,0 +1,32 @@
+learn.libraries:
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/bootstrap-theme.css: {}
+      css/da-slider.css: {}
+      css/font-awesome.min.css: {} 
+      css/isotope.css: {}
+      css/style.css: {}
+      css/fonts.css: {}
+
+  js:
+    js/modernizr-latest.js: {}
+    js/jquery.cslider.js: {}
+    js/custom.js: {}
+    js/jquery.min.js: {}
+    js/bootstrap.min.js: {}
+
+  image:
+    images/favicon.png: {}
+    images/logo.png: {}
+    images/bg_header.jpg: {}
+    
+
+
+
+
+
+
+
+
+

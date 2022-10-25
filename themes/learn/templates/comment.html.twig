@@ -1,0 +1,50 @@
+<style>
+small {
+  font-size: smaller;
+  background-color:yellow; 
+}
+</style>
+
+{% if title %}
+   <h3>{{ title }}</h3>
+{% endif %}
+
+Total de letras da palavra: {{ 'Marcio'|length }}
+Exemplo Palavra em Maiusculo: {{ 'Marcio'|upper }}
+Exemplo Palavra em Minisculo: {{ 'MARCIO'|lower }}
+
+{% set alunos ='Marcio,Joao,Maria'|split(',')  %}
+
+    {% for aluno in alunos %}
+        <li>{{ aluno }}</li>
+        <li>{{ aluno|upper }}</li>
+        <li>{{ aluno|lower }}</li>
+        <li>{{ aluno|length }}</li>
+    {% endfor %}
+
+
+{{ user.displayname|upper }}
+
+{{ content }}
+<small style="color:red" >
+Comentário escrito por {{ author }} na data {{ created }}.
+</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

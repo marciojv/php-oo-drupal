@@ -1,0 +1,117 @@
+{#
+/**
+*  Logica aplicada para deixar dinamico o tamanho da div footer 
+*   de conteudo abaixo do conteudo principal.
+*/
+#}
+      {% if page.footer_content_second %}
+         {% set tamanho_coluna = '4' %} 
+      {% else %}
+         {% set tamanho_coluna = '6' %}             
+      {% endif %} 
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href=".">
+					<img src="{{ directory }}/images/logo.png" alt="Techro HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+                                 {{ page.header }}
+                                 {{ page.primary_menu }}
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- Header -->
+	<header id="head">
+
+		<div class="container">
+			<div class="banner-content">
+				<div id="da-slider" class="da-slider">
+					<div class="da-slide">
+						<h2>Educational Website</h2>
+						<p>Amazing free responsive website for free, enjoy!!!</p>
+						<div class="da-img"></div>
+					</div>
+					<div class="da-slide">
+						<h2>Online Education</h2>
+						<p>Bootstrap is a powerful mobile first front-end framework..</p>
+						<div class="da-img"></div>
+					</div>
+					<div class="da-slide">
+						<h2>Super Success</h2>
+						<p>HTML5 is a markup language used for structuring and presenting Web.</p>
+						<div class="da-img"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<section class="container">
+        {{ page.content }}
+	</section>
+
+      <section class="container">
+      <div class="row">
+
+      	<div class="col-md-{{ tamanho_coluna }}">
+            <div class="title-box clearfix ">
+            </div> 
+            {{ page.footer_content_first }}
+        </div>
+        
+        {% if page.footer_content_second %}
+        <div class="col-md-4">
+           <div class="title-box clearfix ">
+           </div>
+              {{ page.footer_content_second }} 
+        </div>
+        {% endif %} 
+
+      	<div class="col-md-{{ tamanho_coluna }}">
+           <div class="title-box clearfix ">
+           </div> 
+              {{ page.footer_content_third }}
+        </div>
+         
+      </div>
+      </section>
+      
+    <footer id="footer">
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+{{ page.footer_first }}
+
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2022. Template by <a href="https://www.ambientelivre.com.br/saas/ead/ambientelivre" rel="develop">Curso Ambiente Livre</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
