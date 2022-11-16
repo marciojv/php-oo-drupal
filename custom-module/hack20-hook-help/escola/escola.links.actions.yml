@@ -1,0 +1,5 @@
+entity.aluno.add_page:
+  route_name: entity.aluno.add_page
+  title: 'Add Aluno'
+  appears_on:
+    - entity.aluno.collection

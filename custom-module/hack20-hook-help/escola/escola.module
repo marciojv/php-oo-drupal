@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+* Implements hook_help().
+*/
+
+function escola_help($route_name, RouteMatchInterface $route_match) {
+
+	switch ($route_name) {
+		case 'help.page.escola':
+		$output = '';
+		$output .= '<h3>' . t('Sobre') . '</h3>';
+		$output .= '<p>' . t('Exemplo de Help do Modulo.') . '</p>';
+		return $output;
+		default:
+	}
+}
