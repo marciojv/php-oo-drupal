@@ -1,0 +1,29 @@
+<?php
+
+// Altera nome do formulário de login e descrição
+
+function escola_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id === 'user_login_form') {
+    $form['name']['#description'] = t('Este texto foi alterado por escola_form_alter().');
+    $form['name']['#title'] = t('Login do Aluno');
+  }
+}
+
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+* Implements hook_help().
+*/
+
+function escola_help($route_name, RouteMatchInterface $route_match) {
+
+	switch ($route_name) {
+		case 'help.page.escola':
+		$output = '';
+		$output .= '<h3>' . t('Sobre') . '</h3>';
+		$output .= '<p>' . t('Exemplo de Help do Modulo.') . '</p>';
+		return $output;
+		default:
+	}
+}
