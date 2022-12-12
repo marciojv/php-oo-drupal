@@ -1,0 +1,8 @@
+module.sample_rest_resource:
+  path: '/vb-rest'
+  options:
+    _auth: [ 'basic_auth' ]
+  requirements:
+    _permission: 'access content'
+
+

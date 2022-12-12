@@ -1,0 +1,4 @@
+name: Escola
+description: 'Modulo Escola Hacker.'
+core_version_requirement: ^9
+type: module

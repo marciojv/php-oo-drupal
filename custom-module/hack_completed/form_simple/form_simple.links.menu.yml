@@ -1,0 +1,6 @@
+form_simple.settings_form:
+  title: form_simple
+  description: Configure form_simple.
+  parent: system.admin_config_system
+  route_name: form_simple.settings_form
+  weight: 10

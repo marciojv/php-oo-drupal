@@ -1,0 +1,28 @@
+escola.alunos:
+  path: '/alunos'
+  defaults:
+    _controller: '\Drupal\escola\Controller\EscolaController::alunos'
+    _title: 'Os alunos'
+  requirements:
+    _permission: 'access content'
+
+escola.add_aluno:
+  path: '/add_aluno'
+  defaults:
+    _title: 'Cadastro de Aluno'
+    _form: '\Drupal\escola\Form\AlunoForm'
+  requirements:
+    _permission: 'access content'
+
+form_aluno.settings_form:
+  path: '/admin/config/system/form-aluno'
+  defaults:
+    _title: 'form_aluno settings'
+    _form: 'Drupal\escola\Form\SettingsForm'
+  requirements:
+    _permission: 'administer form_aluno configuration'
+
+
+
+
+

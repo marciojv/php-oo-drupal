@@ -1,0 +1,31 @@
+form_simple.form_simple:
+  path: '/form-simple/form-simple'
+  defaults:
+    _title: 'Form simple'
+    _form: 'Drupal\form_simple\Form\FormSimpleForm'
+  requirements:
+    _permission: 'access content'
+
+form_simple.example:
+  path: '/form-simple/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\form_simple\Controller\FormSimpleController::build'
+  requirements:
+    _permission: 'access content'
+
+form_simple.settings_form:
+  path: '/admin/config/system/form-simple'
+  defaults:
+    _title: 'form_simple settings'
+    _form: 'Drupal\form_simple\Form\SettingsForm'
+  requirements:
+    _permission: 'administer form_simple configuration'
+
+form_simple.example_confirm:
+  path: '/form-simple/example-confirm'
+  defaults:
+    _title: 'Example confirm'
+    _form: 'Drupal\form_simple\Form\ExampleConfirmForm'
+  requirements:
+    _permission: 'administer site configuration'

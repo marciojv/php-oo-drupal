@@ -1,0 +1,64 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+// Altera nome do formulário de login e descrição
+
+/**
+* Implements hook_form_alter().
+*/
+
+
+function escola_form_alter(&$form, &$form_state, $form_id) {
+
+  print($form[0]);
+
+  if ($form_id === 'user_login_form') {
+    $form['name']['#description'] = t('Este texto foi alterado por escola_form_alter().');
+    $form['name']['#title'] = t('Login do Aluno');
+  }
+
+  if ($form_id === 'node_article_form') {
+    //print("<BR>TESTE</BR>");
+    $form['body']['#value'] = t('Salvar o Artigo Acadêmico');
+  }
+
+}
+
+
+
+/**
+* Implements hook_help().
+*/
+
+function escola_help($route_name, RouteMatchInterface $route_match) {
+
+       //var_dump($route_name);
+
+	switch ($route_name) {
+		case 'help.page.escola':
+		$output = '';
+		$output .= '<h3>' . t('Sobre') . '</h3>';
+		$output .= '<p>' . t('Exemplo de Help do Modulo.') . '</p>';
+		return $output;
+		default:
+	}
+
+    // if ( $route_name == "help.page" )
+    //   return "<H2>TESTE</H2>";
+}
+
+
+function escola_theme ($existing, $type, $theme, $path) {
+
+  return [
+     'aluno' => [
+        'variables' => [ 
+                        'header' => NULL,
+                        'rows' => array(),
+                        'limit' => 0, 
+                       ],
+     ],
+  ];
+}
+

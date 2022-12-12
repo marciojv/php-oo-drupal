@@ -1,0 +1,8 @@
+view aluno entities:
+  title: 'View Aluno entities'
+edit aluno entities:
+  title: 'Edit Aluno entities'
+delete aluno entities:
+  title: 'Delete Aluno entities'
+add aluno entities:
+  title: 'Create new Aluno entities'

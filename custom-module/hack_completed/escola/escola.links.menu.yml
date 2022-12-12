@@ -1,0 +1,28 @@
+entity.aluno.collection:
+  title: 'Lista de Alunos'
+  route_name: entity.aluno.collection
+  description: 'Lista de entidades Aluno'
+  parent: system.admin_structure
+  weight: 100
+
+escola.alunos:
+  title: 'Aluno'
+  description: 'Apresente Alunos'
+  route_name: escola.alunos
+  menu_name: main
+  weight: 0
+
+escola.add_alunos:
+  title: 'Cadastra Aluno'
+  description: 'Cadastra Alunos'
+  route_name: escola.add_aluno
+  menu_name: main
+  weight: 0
+
+form_aluno.settings_form:
+  title: form_aluno
+  description: Configure form_aluno.
+  parent: system.admin_config_system
+  route_name: form_aluno.settings_form
+  weight: 10
+

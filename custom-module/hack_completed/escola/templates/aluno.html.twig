@@ -1,0 +1,14 @@
+<table>
+<tr>
+  <th>{{ header }}</th>
+  <th>Cidade</th>
+</tr>
+    {% for key, aluno in rows %}
+       <tr>
+         <td>{{ aluno[0] }}</td>
+         <td>{{ aluno[1] }}</td>
+       </tr>
+    {% endfor %}
+
+
+</table>

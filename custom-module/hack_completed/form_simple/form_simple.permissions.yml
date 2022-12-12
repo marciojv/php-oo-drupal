@@ -1,0 +1,4 @@
+administer form_simple configuration:
+  title: 'Administer form_simple configuration'
+  description: 'Optional description.'
+  restrict access: true

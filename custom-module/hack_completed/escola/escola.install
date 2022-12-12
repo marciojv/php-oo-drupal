@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * escola module install file.
+ */
+
+/**
+ * Creates the Alunos entity type.
+ */
+function escola_update_9004(&$sandbox) {
+  \Drupal::entityTypeManager()->clearCachedDefinitions();
+
+  $entity_type = \Drupal::entityTypeManager()->getDefinition('aluno');
+  \Drupal::entityDefinitionUpdateManager()->installEntityType($entity_type);
+}
