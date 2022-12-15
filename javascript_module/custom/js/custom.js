@@ -6,8 +6,8 @@
   // Put here your custom JavaScript code.
   console.log ("Test");
 
-  window.confirm("Voce quer continuar?");
-  window.alert(5+6);
+  //window.confirm("Voce quer continuar?");
+  //window.alert(5+6);
   console.log("Continuando...");
   myFunction();
   console.log("Finalizado , tchau!");
