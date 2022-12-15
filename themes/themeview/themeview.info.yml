@@ -1,0 +1,4 @@
+name: themeview
+type: theme
+base theme: bartik
+core_version_requirement: '^9'
