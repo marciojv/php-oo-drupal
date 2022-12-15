@@ -1,0 +1,5 @@
+name: Custom Js Sample
+type: module
+description: Custom JS module for learning Drupal 9
+core_version_requirement: ^9
+
